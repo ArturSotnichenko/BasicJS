@@ -1,0 +1,11 @@
+.fraim {
+    width: 50%;
+    margin: auto;
+  }
+  
+  .button {
+      display: grid;
+      height: 50px;
+      margin: 10px;
+  }
+  
