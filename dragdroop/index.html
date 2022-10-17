@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <link rel="stylesheet" href="stile.css">
+    <title>drag&amp;drop</title>
+  </head>
+  <body style='min-height: 100vh'>
+<img src='http://fe.it-academy.by/Sites/0000007/sax.jpg' >
+<img src='http://fe.it-academy.by/Sites/0000007/Yin_and_Yang.png' width=100>
+<img src='http://fe.it-academy.by/Sites/0000007/Man-and-woman.png' width=150>
+<img src='http://fe.it-academy.by/Sites/0000007/No_smoking.png' style='padding-left: 50px'>
+
+<script>
+ "use strict";
+
+let picts = document.getElementsByTagName('img');
+
+for(let i=picts.length-1; i>=0; i--) {
+  let pic = picts[i];
+  pic.style.position = 'absolute'
+  pic.style.left = pic.offsetLeft + 'px';
+  pic.style.top = pic.offsetTop + 'px';
+  pic.style.cursor = 'grabbing';
+  pic.style.margin = '0px';  
+
+  pic.addEventListener('mousedown', mouseDown, false)
+
+  pic.ondragstart = function() {
+    return false;
+  };
+}
+
+function mouseDown(eo) {
+  eo = eo||window.event;
+  let elem = eo.target;
+  let posElem = getElementPos(elem);
+  let offsetX = eo.pageX - posElem.left;
+  let offsetY = eo.pageY - posElem.top;
+
+  document.body.appendChild(elem);
+
+  function moveElem(eo) {
+    elem.style.left = eo.pageX - offsetX + 'px';
+    elem.style.top = eo.pageY - offsetY + 'px';
+  }
+
+  document.onmousemove = function(eo) {
+    eo = eo||window.event;
+    moveElem(eo);
+  };
+
+  elem.onmouseup = function() {
+    document.onmousemove = null;
+    elem.onmouseup = null;
+  };
+
+}
+
+
+
+function getElementPos(elem) {
+  let borBox=elem.getBoundingClientRect();
+  return {
+      left: borBox.left+window.pageXOffset,
+      top: borBox.top+window.pageYOffset
+  };
+}
+
+</script>
+
+  </body>
+</html>
