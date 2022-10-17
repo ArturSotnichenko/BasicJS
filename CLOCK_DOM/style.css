@@ -1,0 +1,59 @@
+
+.fraim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.toHide { display: none;
+}
+
+.clock {
+    position: relative;
+    background-color: yellow;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 2px solid gray;
+    box-shadow: 10px 5px 5px gray;
+}
+.clock_num {position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    border-radius: 50%;
+    border: 1px solid gray;}
+
+    .clock_center {
+        position: absolute;
+        border-radius: 50%;
+        background-color:green;
+        z-index: 10;   
+    }
+    .hand_hour {
+        position: absolute;
+        border-radius: 15px;
+        background-color: black;
+        opacity: .4
+    }
+
+    .hand_min {
+        position: absolute;
+  border-radius: 15px;
+  background-color: black;
+        opacity: .3
+    }
+    .hand_sec  {
+        position: absolute;
+  border-radius: 50px;
+  background-color: black;
+        opacity: .3
+      }
+
+      .clock_date {
+        position: absolute;
+        text-align: center;
+        line-height: 1;
+      }
