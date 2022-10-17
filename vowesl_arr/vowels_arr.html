@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>vowels_arr</title>
+  </head>
+  <body>
+<script>
+
+let str = prompt ('Введите предложение')
+function findVowels1(ask) {
+let counter=0;
+let vowels = ['а','у','о','и','э','ы','я','ю','е','ё','А','У','О','И','Э','Ы','Я','Ю','Е','Ё'];
+let askArr = ask.split ('');
+askArr.forEach ((elem) =>{
+    if (vowels.includes (elem)) {
+        counter ++
+    }
+})
+return counter;
+}
+
+
+function findVowels2(ask) {
+let counter=0;
+let vowels = ['а','у','о','и','э','ы','я','ю','е','ё','А','У','О','И','Э','Ы','Я','Ю','Е','Ё'];
+let askArr = ask.split ('');
+askArr.filter ((elem) =>{
+    if (vowels.includes (elem)) {
+        counter ++
+    }
+})
+return counter;
+}
+
+function findVowels3(ask) {
+    let vowels = ['а','у','о','и','э','ы','я','ю','е','ё','А','У','О','И','Э','Ы','Я','Ю','Е','Ё'];
+    let askArr = ask.split ('');
+    let filteredAskArr = askArr.filter (function (elem) {
+    return vowels.includes (elem);
+});
+    return filteredAskArr.length;
+  
+}
+
+function findVowels4(ask) {
+    let vowels = ['а','у','о','и','э','ы','я','ю','е','ё','А','У','О','И','Э','Ы','Я','Ю','Е','Ё'];
+    let askArr = ask.split ('');
+    return askArr.reduce ((prev, elem)  => prev + vowels.includes( elem), 0);
+       
+}
+
+ console.log ( findVowels1(str))
+ console.log ( findVowels2(str))
+ console.log ( findVowels3(str))
+ console.log ( findVowels4(str))
+
+
+
+
+</script>
+
+
+
+  </body>
+</html>

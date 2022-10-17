@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALID_FORM</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <div >
+        <p>Для внесения вашего сайта в каталог, заполните форму&colon; </p>
+        <form method="post" action="https://fe.it-academy.by/TestForm.php" name="Info" novalidate>
+
+
+            <label > Разработчики&colon; </label>
+            <div class="column">
+                <input type="text" name="devName">
+                <span id="err1"></span>
+            </div> <br>
+
+            <label>Название сайта&colon;</label>
+            <div class="column">
+                <input type="text" name="webSiteName">
+                <span id="err2"></span>
+            </div><br>
+
+            <label>URL сайта&colon;</label>
+            <div class="column">
+                <input type="text" name="urlName">
+                <span id="err3"></span>
+            </div><br>
+
+            <label>Дата запуска сайта&colon;</label>
+            <div  class="column">
+                <input type="date" name="webSiteDate">
+                <span id="err4"></span>
+            </div>    <br>
+
+            <label>Посетителей в сутки&colon;</label>
+            <div  class="column">
+                <input type="text" name="visPerDay">
+                <span id="err5"></span>
+            </div> <br>
+
+            <label>E-mail для связи&colon;</label>
+            <div class="column">
+                <input type="text" name="emailName">
+                <span id="err6"></span>
+            </div><br>
+
+            <div class="column1">Рубрика каталога&colon;</div>
+            <div class="column">
+                <select name="rubricName">
+                    <option value= '1'>здоровье</option>
+                    <option value='2'>домашний уют</option>
+                    <option  value='3' selected>бытовая техника</option>
+
+                </select>
+                <span id='err7'></span>
+            </div><br>
+
+            <div class="column1">Размещение&colon;</div>
+            <div class="column">
+
+                <input type="radio" value='1'  name="costName">бесплатное
+                <input type="radio" value='2'  name="costName">платное
+                <input type="radio" value='3'  name="costName">VIP
+
+                <span id='err8'></span>
+            </div> <br>
+
+            <label >Разрешить отзывы:
+            </label>
+            <div  class="column">
+                <input type="checkbox" name="commentName">
+                <span id='err9'></span>
+            </div><br>
+
+
+            <div class="column1">Описание сайта:
+            </div>
+            <textarea  name="contentName">
+              </textarea>
+              <span id='err10'></span>
+     </div> <br>
+    
+     <input type="submit" value="Опубликовать">
+  
+    </form>
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+

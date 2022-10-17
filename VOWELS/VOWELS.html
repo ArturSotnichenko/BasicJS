@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>vowels</title>
+  </head>
+  <body>
+ <script> 
+
+let str = prompt ('Введите предложение')
+function findVowels(ask) {
+let counter=0;
+let vowels = ['а','у','о','и','э','ы','я','ю','е','ё','А','У','О','И','Э','Ы','Я','Ю','Е','Ё']
+for (let x of ask){
+    if (vowels.includes (x)) {
+        counter +=1
+    }
+}
+return counter;
+}
+ console.log ( findVowels(str))
+
+
+</script>
+    
+
+
+  </body>
+</html>

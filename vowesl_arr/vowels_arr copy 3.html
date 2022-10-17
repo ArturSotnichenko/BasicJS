@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>vowels_arr</title>
+  </head>
+  <body>
+<script>
+
+
+function words() {
+            var stringsearch = ["а", "о", "и", "е", "ё", "э", "ы", "у", "ю", "я"];
+            var f = prompt("Vvedite stroky:");
+ 
+            var k = [...f].reduce((a, b) => a + stringsearch.includes(b), 0);
+ 
+            return k ? k : "Net sovpadenyi";
+        }
+ 
+        console.log(words());
+
+
+
+
+
+</script>
+
+
+
+  </body>
+</html>

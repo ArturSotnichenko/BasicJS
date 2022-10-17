@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>vowels</title>
+  </head>
+  <body>
+ <script> 
+
+let str = prompt ('Введите предложение')
+function findVowels(ask) {
+let counter=0;
+for (let i=0; i<ask.length; i++){
+    switch (ask [i]) {
+      case 'а':
+      case 'у':
+      case 'о':
+      case 'и':
+      case 'э':
+      case 'ы':
+      case 'я':
+      case 'ю':
+      case 'е':
+      case 'ё':
+      case 'А':
+      case 'У':
+      case 'О':
+      case 'И':
+      case 'Э':
+      case 'Ы':
+      case 'Я':
+      case 'Ю':
+      case 'Е':
+      case 'Ё':
+      counter++
+break;
+default:
+  break;
+      }
+}
+return counter;
+}
+ console.log ( findVowels(str))
+
+
+</script>
+    
+
+
+  </body>
+</html>

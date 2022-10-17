@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>countries</title>
+  </head>
+  <script src='countries.js'></script>
+ <script>
+
+    var countrysH={};
+
+    addCountry('Германия','Берлин');
+    addCountry('Венгрия','Будапешт');
+    addCountry('Франция','Париж');
+   
+
+    function userAddCountry () {
+    var countryName=prompt ('Введите название страны');
+    var capitalName=prompt ('Введите назчание сталицы');
+    addCountry(countryName, capitalName);
+    console.log( "список стран:" + listCountrys() );
+    }
+    
+    function gci () {
+        var countryName=prompt("введите назначение страны");
+        var info=getCountryInfo (countryName)
+        alert (info);
+    }
+    
+    function LC () {
+       var info=listCountrys ();
+    alert (info);
+    }
+function del () {
+    var countryName=prompt('какую страну необходимо убрать из перечня?');
+    deleteCountry (countryName);
+    console.log( "список стран:" + listCountrys() );
+}
+
+
+
+    
+    
+   
+
+
+</script>
+
+  <body>
+    <input type='button' value='Ввод информации о стране' onclick='userAddCountry()'>
+    <br>
+    <input type="button" value='получение информации о стране' onclick='gci ()'>
+    <br>
+    <input type="button" value='перечень всех стран' onclick='LC ()'>
+    <br>
+    <input type="button" value='удаление информации о стране' onclick='del ()'>
+  </body>
+</html>
+
+
+
+

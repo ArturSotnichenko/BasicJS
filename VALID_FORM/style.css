@@ -1,0 +1,23 @@
+body{
+    line-height: 200%;
+    font-size: 16px;
+    }
+label, .column1{
+    float: left;
+    width: 30%;
+    }
+    .column{
+    width: 70%;
+    display: inline-block;
+    }
+   span {
+    color: red;
+    position: relative;
+    vertical-align: top;
+    z-index: 2;
+    margin-left: 11px;
+    padding: 7px 5px;
+    font-size: 14px;
+   }
+    
+ 

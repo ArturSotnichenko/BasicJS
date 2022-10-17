@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+  .conteiner{
+    width: 55%;
+    margin: auto;
+  }
+  input[type]{
+    margin: 5px 5px 5px 0px;
+    width:100%
+  }
+  input[type="submit"]{
+    width: auto;
+    margin: 5px 5px 5px 0px;
+   
+  }
+span {
+    width: 180px;
+  }
+  textarea {
+    width: 100%;
+  }
+  input[type="radio"]{
+    width: auto;
+   
+  }
+  input[type="checkbox"]{
+    width: auto;
+  }
