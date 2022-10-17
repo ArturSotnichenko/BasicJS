@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>ANKETA</title>
+  </head>
+  <body>
+    <script>
+
+      
+        var surname=prompt('Введите Фамилию:');
+        var name=prompt('Введите Имя:');
+        var patronymic=prompt('Введите Отчество:');
+        
+    
+      var OldInYears=prompt ('Введите ваш возраст');
+      var OldIY=parseInt (OldInYears);
+      var OldID=parseInt (OldInYears*365);
+      
+  
+      var gender=confirm('Еслиы вы мужского пола, нажмите "Ок"');
+     retage =gender?60:55;
+     retired= (OldIY >=retage)?'да' : 'нет'
+               
+
+    
+      alert( 'ваше ФИО: ' + surname + ' ' +  name + ' ' + patronymic +
+       '\nваш возраст в годах: ' +  OldIY +
+       '\nваш возраст в днях: '  + OldID + 
+       '\nчерез 5 лет вам будет: ' +(OldIY + 5) + 
+       '\nваш пол: ' +  (gender? 'мужской' : 'женский') + 
+       '\nвы на пенсии: ' + retired);
+  
+  </script>
+    
+
+
+</body>
+</html>

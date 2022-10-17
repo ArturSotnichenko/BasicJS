@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ANKETA</title>
+ </head>
+<body>
+<script>
+  "use strict";
+
+ 
+    let fullname="";
+    let age;
+    let ageDays;
+    let ageFuture;
+    let gender;
+    let retage;
+    let retirement;
+    let genderMF
+ 
+
+    enterFullName();
+   enterAge();
+   enterGender();
+
+
+      function enterFullName() {
+        function enterFullName(question) {
+          let answer=prompt(question);
+          if (!answer){
+            enterFullName(question);
+          } else{
+            fullname+= answer+" ";
+          }
+        }
+        enterFullName("Введите фамилию: ");
+        enterFullName("Введите имя: ");
+        enterFullName("Введите отчество: ");
+
+      }
+
+
+
+    function enterAge() {
+
+      age=parseInt(prompt("Введите Ваш возраст"));
+      if (isFinite(age)){
+        ageDays=age*365;
+        ageFuture=age+5;
+      } else {
+       enterAge();
+      }
+    };
+
+    function enterGender() {
+      gender=confirm("Если вы мужского пола, нажмите 'Ок', если женского -'Отмена'");
+      genderMF =  gender?'мужской': 'женский';
+      retage =gender?60:55;
+      retirement = (age>=retage)?'да' : 'нет'
+      
+      
+    };
+
+    
+
+    
+      alert("Ваше ФИО: "+fullname+
+      "\nВаш возраст в годах: " + age +
+      "\nВаш возраст в днях: "+ageDays+
+      "\nчерез 5 лет Вам будет: "+ageFuture + 
+      "\nВаш пол: " +  genderMF +
+      "\nВы на пенсии: " + retirement );
+    
+</script>
+</body>
+
+</html>
